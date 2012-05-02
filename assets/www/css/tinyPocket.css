@@ -1,0 +1,78 @@
+.ui-page{
+	background: #41556d !important;
+	background-size: 200px 200px !important;
+}
+
+header {
+	height: 42px !important;
+	background: #9E3323 url('../img/header-bg.png') repeat-x !important;
+	border: none !important;
+	border-bottom: #333 1px solid !important;
+	box-shadow: 0 0 25px #737373;
+}
+
+header h1 {
+	margin:10px !important;
+	font-family: Arial, sans-serif;
+	font-size: 20px !important;
+	color: #fff;
+}
+
+#listView ul li {
+	background: url('../img/li-bg.png') repeat-x !important;
+	margin: 5px !important;
+	border: #434343 1px solid !important;
+	border-radius: 5px !important;
+	font-family: Helvetica, Arial, sans-serif !important;
+	color: #535353 !important;
+}
+
+#listView .info {
+	max-width: 70%;
+	float: left;
+}
+
+#listView .info .date {
+	font-size: 12px;
+}
+
+#listView .amount {
+	margin-right: 3px;
+	padding-top: 7px;
+	max-width: 25%;
+	float: right;
+}
+
+#listView .currency {
+	margin-right: 10px;
+	padding-top: 7px;
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+#summary {
+	background: url('../img/li-bg.png') !important;
+	margin: 5px !important;
+	border: #434343 1px solid !important;
+	border-radius: 5px !important;
+	float: right;
+}
+
+#summary .text {
+	font-weight: bold;
+}
+
+#summary .amount {
+	margin-left: 10px !important;
+}
+
+.field, fieldset {
+	margin: 10px !important;
+}
+
+fieldset .ui-block-a {
+	float: right;
+}

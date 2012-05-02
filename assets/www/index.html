@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TinyPocket</title>
+
+<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.1.0.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.1.0.min.css" />
+<link rel="stylesheet" href="css/tinyPocket.css" />
+
+<script type="text/javascript" src="js/cordova-1.7.0rc1.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/dateFormat.js"></script>
+<script type="text/javascript" src="js/tinyPocket.js"></script>
+</head>
+
+<body>
+	<div id="movements" data-role="page">
+		<header data-role="header" data-position="fixed">
+			<h1>TinyPocket</h1>
+		</header>
+
+		<div id="summary" data-role="content">
+			<span class="text">Total:  </span><span class="totalAmount"></span>  <span class="currency"></span>
+		</div>
+		<div class="clear"></div>
+
+		<div id="listView" data-role="content">
+			<ul id="movementsList" data-role="listview"></ul>
+		</div>
+
+		<footer data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="" onClick="$.mobile.TinyPocket.prepareNewMovement(0)" data-icon="plus">New movement</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+
+	<div id="newMovement" data-role="page">
+		<header data-role="header" data-position="fixed">
+			<h1>TinyPocket</h1>
+		</header>
+
+		<span id="id" style="display: none"></span>
+		<div class="field"><input id="concept" type="text" placeholder="Concept" required /></div>
+		<div class="field"><textarea id="description" placeholder="Enter some description"></textarea></div>
+		<div class="field"><input id="amount" type="text" placeholder="Amount" required /></div>
+		<fieldset class="ui-grid-a">
+			<div class="ui-block-a"><a href="#" data-role="button" data-icon="plus" data-theme="a" onclick="$.mobile.TinyPocket.addMovement(1)">Add</a></div>
+			<div class="ui-block-a"><a href="#" data-role="button" data-icon="minus" data-theme="a" onclick="$.mobile.TinyPocket.addMovement(-1)">Substract</a></div>
+		</fieldset>
+
+		<footer data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#add" onClick="$.mobile.TinyPocket.clear()" data-icon="delete">Clear</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
